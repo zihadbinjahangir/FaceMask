@@ -46,8 +46,9 @@ def predict_and_mask(image: Image.Image, model, resize=(128, 128)):
     selected_indices = [0, 5, 6, 7, 8, 9]
     selected_points = points_original[selected_indices]
 
-    # Load the sticker (make sure this path exists in production)
-    sticker = Image.open("a.png").convert("RGBA")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    sticker_path = os.path.join(BASE_DIR, "a.png")
+    sticker = Image.open(sticker_path).convert("RGBA")
 
     # Convert base image to RGBA to support transparency
     base_image = image.convert("RGBA")
