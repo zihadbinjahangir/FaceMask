@@ -20,7 +20,7 @@ def download_model():
         print("Model downloaded.")
 
 def load_model(path):
-    from model import PolygonUNetDownClassifier
+    from backend.model import PolygonUNetDownClassifier
     model = PolygonUNetDownClassifier()
     model.load_state_dict(torch.load(path, map_location='cpu'))
     model.eval()
