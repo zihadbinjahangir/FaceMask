@@ -1,4 +1,4 @@
-# 🧠 Polygon Predictor Backend (FastAPI)
+# 🧠 Mask Predictor Backend (FastAPI)
 
 This is the backend for the Polygon Predictor app, built with FastAPI. It loads a pre-trained PyTorch model to apply polygon-style masks to uploaded images.
 
