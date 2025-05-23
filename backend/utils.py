@@ -6,6 +6,19 @@ import numpy as np
 import io
 from torchvision import transforms
 
+import os
+import gdown
+
+MODEL_PATH = "polygon_model.pth"
+MODEL_DRIVE_ID = "1tGUienHqq33j7BLKv2_mK4q8fIFFnTgS"
+
+def download_model():
+    if not os.path.exists(MODEL_PATH):
+        print("Downloading model from Google Drive...")
+        url = f"https://drive.google.com/uc?id={MODEL_DRIVE_ID}"
+        gdown.download(url, MODEL_PATH, quiet=False)
+        print("Model downloaded.")
+
 def load_model(path):
     from model import PolygonUNetDownClassifier
     model = PolygonUNetDownClassifier()
