@@ -1,7 +1,7 @@
 
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import StreamingResponse
-from utils import load_model, predict_and_mask, download_model
+from backend.utils import load_model, predict_and_mask, download_model
 from PIL import Image
 import io
 
