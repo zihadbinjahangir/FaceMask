@@ -8,3 +8,4 @@ matplotlib
 requests
 python-multipart
 streamlit
+gdown
