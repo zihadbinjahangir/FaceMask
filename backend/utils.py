@@ -80,6 +80,8 @@ def predict_and_mask(full_image_pil: Image.Image, model, sticker_path="a.png", r
     sticker_y = int(center_y - new_height / 2)
 
     # Load and resize sticker
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    sticker_path = os.path.join(BASE_DIR, sticker_path)
     sticker = Image.open(sticker_path).convert("RGBA")
     resized_sticker = sticker.resize((new_width, new_height), resample=Image.LANCZOS)
 
